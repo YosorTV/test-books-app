@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react";
-import { Loader } from "../components/UI/Loader";
+import { Loader, Error } from "../components/UI";
 import { getBooks } from "../helpers";
 
 export const Context = createContext();
@@ -7,7 +7,7 @@ export const Context = createContext();
 export const BooksProvider = ({children}) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [books, setBooks] = useState(null);
+  const [books, setBooks] = useState([]);
 
   useEffect(() => {
     getBooks(setBooks, setLoading, setError);
@@ -15,13 +15,11 @@ export const BooksProvider = ({children}) => {
 
   return(
     <>
-      {error && <div>{error}</div>}
-      {loading 
-      ? <Loader />
-      : <Context.Provider value={books}>
+      {error && <Error error={error}/>}
+      {loading && <Loader />}
+      <Context.Provider value={books}>
           {children}
-        </Context.Provider>
-      }
+      </Context.Provider>
     </>
   )
 }

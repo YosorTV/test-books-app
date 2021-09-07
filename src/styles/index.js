@@ -1,13 +1,16 @@
 import styled from 'styled-components';
-import { Card, Paper } from '@material-ui/core';
+import { Box, Card, Paper } from '@material-ui/core';
 export * from './theme';
 
 export const Load = styled.div`
   background: linear-gradient(to bottom, #ffffff, #f1f1f1 50%, #d3d3d3 75%, #d3d3d3 75%);
   min-height: 100vh;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  z-index: 100000;
 `
 export const Nav = styled.nav`
   display: flex;
@@ -31,15 +34,12 @@ export const Nav = styled.nav`
 export const Main = styled.main`
   padding:4rem;
   display: flex;
-  min-height: 100vh;
+  min-height: 80vh;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  ${({ theme }) => theme.breakpoints.down("md")} {
-    padding:2rem;
-  }
   ${({ theme }) => theme.breakpoints.down("xs")} {
-    padding:.5rem;
+    padding:2rem;
   }
 `;
 export const StyledCard = styled(Card)`
@@ -105,7 +105,7 @@ export const StyledCardDetail = styled(Paper)`
         justify-content: space-between;
         padding: 1rem 0rem;
         &__about{
-          flex: 1 1 100%;
+          flex: 1 1 60%;
           padding-right: 1rem;
         }
         &__isbn, &__action{
@@ -125,4 +125,16 @@ export const StyledCardDetail = styled(Paper)`
       }
     }
   }
+`;
+
+export const ErrorNotification = styled(Box)`
+    position: absolute;
+    width: 40vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .MuiAlert-root{
+      display: flex;
+      justify-content: center;
+    }
 `;
