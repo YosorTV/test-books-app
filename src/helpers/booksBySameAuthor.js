@@ -1,4 +1,4 @@
-const cutPrefixRegExp =(string = '') => string.replace(/^(Mr.|Ms.|Mrs.|Dr.|Prof.)\.?\s/i, '');
+export const cutPrefixRegExp =(string = '') => string.replace(/^(Mr.|Ms.|Mrs.|Dr.|Prof.)\.?\s/i, '');
 
 export const booksBySameAuthor = (data = [], currentAuthor, bookId) => {
 const name = cutPrefixRegExp(currentAuthor);

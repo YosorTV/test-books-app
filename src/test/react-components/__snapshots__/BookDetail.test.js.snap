@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BookDetail component BookDetail snapshot 1`] = `
+<Styled(WithStyles(ForwardRef(Paper)))
+  component="article"
+/>
+`;

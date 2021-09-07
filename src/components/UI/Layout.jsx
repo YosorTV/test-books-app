@@ -1,6 +1,6 @@
 
 //Core
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useNavigate } from 'react-router';
 import { Outlet, useLocation } from 'react-router-dom';
 import { CssBaseline, AppBar, useTheme, Container, IconButton } from "@material-ui/core";
@@ -25,15 +25,6 @@ const Return = ({ path }) => {
 export const Layout = () => {
   const muiTheme = useTheme();
   const { pathname } = useLocation();
-  
-  useEffect(() => {
-    window.scrollTo({
-      top:0,
-      left: 0,
-      behavior: 'auto'
-    });
-  }, [pathname]);
-
 
   return (
     <ThemeProvider theme={muiTheme}>

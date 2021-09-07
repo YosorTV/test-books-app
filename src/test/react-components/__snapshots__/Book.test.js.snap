@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Book component Book snapshot 1`] = `
+<WithStyles(ForwardRef(Grid))
+  component="li"
+  item={true}
+  lg={4}
+  md={6}
+  sm={12}
+  xl={4}
+  xs={12}
+>
+  <Styled(WithStyles(ForwardRef(Card)))>
+    <WithStyles(ForwardRef(CardMedia))
+      className="card-image"
+      id="img"
+      image="placeholder.jpg"
+    />
+    <WithStyles(ForwardRef(CardContent))>
+      <WithStyles(ForwardRef(Typography))
+        component="h2"
+        gutterBottom={true}
+        id="title"
+        variant="h5"
+      />
+    </WithStyles(ForwardRef(CardContent))>
+    <WithStyles(ForwardRef(CardActions))>
+      <WithStyles(ForwardRef(Button))
+        component={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "propTypes": Object {
+              "onClick": [Function],
+              "replace": [Function],
+              "state": [Function],
+              "target": [Function],
+              "to": [Function],
+            },
+            "render": [Function],
+          }
+        }
+        id="action"
+        to="/all-books/undefined"
+      >
+        More information
+      </WithStyles(ForwardRef(Button))>
+    </WithStyles(ForwardRef(CardActions))>
+  </Styled(WithStyles(ForwardRef(Card)))>
+</WithStyles(ForwardRef(Grid))>
+`;

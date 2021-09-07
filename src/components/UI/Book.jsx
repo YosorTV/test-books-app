@@ -10,17 +10,18 @@ export const Book = ({ title, author, cover, id }) => {
     <Grid item xs={12} sm={12} md={6} lg={4} xl={4} component="li">
       <StyledCard>
         <CardMedia
+          id="img"
           className="card-image"
           image={cover ? cover : placeholder}
           title={title}
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
+          <Typography gutterBottom variant="h5" component="h2" id="title">
             {author}
           </Typography>
         </CardContent>
       <CardActions>
-        <Button component={Link} to={`/all-books/${id}`}>
+        <Button component={Link} to={`/all-books/${id}`} id="action">
           More information
         </Button>
       </CardActions>
